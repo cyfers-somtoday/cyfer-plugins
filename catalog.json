@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T11:39:15Z",
+  "updatedAt": "2026-10-13T09:45:56Z",
   "plugins": [
     {
       "id": "berichten",
@@ -23,7 +23,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/berichten"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/berichten"
     },
     {
       "id": "cijfers",
@@ -48,12 +48,12 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/cijfers"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/cijfers"
     },
     {
       "id": "widget-cijfers",
       "name": "Cijfers (Widget)",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "Individuele voortgangs- en examencijfers per schooljaar op Overzicht",
       "author": "Sam Hijmans",
       "kind": "widget",
@@ -72,7 +72,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/widget-cijfers"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/widget-cijfers"
     },
     {
       "id": "huiswerk",
@@ -94,7 +94,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/huiswerk"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/huiswerk"
     },
     {
       "id": "pack-opening",
@@ -119,7 +119,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/pack-opening"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/pack-opening"
     },
     {
       "id": "rooster",
@@ -139,7 +139,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/rooster"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/rooster"
     },
     {
       "id": "vandaag",
@@ -158,7 +158,7 @@
         ]
       },
       "downloadUrl": "",
-      "sourceUrl": "https://github.com/cyfers-somtoday/cyfer-plugins/tree/main/plugins/vandaag"
+      "sourceUrl": "https://github.com/Samhij/cyfer-plugins/tree/main/plugins/vandaag"
     }
   ]
 }

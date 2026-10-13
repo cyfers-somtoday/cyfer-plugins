@@ -176,6 +176,33 @@ function isGradeColumn(grade) {
 }
 
 /**
+ * Grades that would appear as rows (same filter as fillTable).
+ * @param {SomtodayGrade[]} items
+ */
+function countDisplayableGrades(items) {
+  let count = 0;
+  for (const grade of items) {
+    if (!isGradeColumn(grade)) continue;
+    if (!scoreOf(grade)) continue;
+    count += 1;
+  }
+  return count;
+}
+
+/**
+ * Prefer voortgang; fall back to examen when voortgang has nothing to show.
+ * @param {SomtodayGrade[]} normal
+ * @param {SomtodayGrade[]} exam
+ * @returns {"normal" | "exam"}
+ */
+function pickDefaultTable(normal, exam) {
+  if (countDisplayableGrades(normal) === 0 && countDisplayableGrades(exam) > 0) {
+    return "exam";
+  }
+  return "normal";
+}
+
+/**
  * @param {HTMLTableElement} table
  * @param {SomtodayGrade[]} items
  */
@@ -409,8 +436,11 @@ async function loadGrades() {
       const tb = Date.parse(b.datumInvoer || b.datumInvoerEerstePoging || "") || 0;
       return tb - ta;
     };
-    fillTable(gradesTable, normal.slice().sort(byDateDesc));
-    fillTable(examGradesTable, exam.slice().sort(byDateDesc));
+    const sortedNormal = normal.slice().sort(byDateDesc);
+    const sortedExam = exam.slice().sort(byDateDesc);
+    fillTable(gradesTable, sortedNormal);
+    fillTable(examGradesTable, sortedExam);
+    setActiveTable(pickDefaultTable(sortedNormal, sortedExam));
     setStatus(partial ? "Niet alle vakken konden worden geladen; je ziet een deel van de cijfers." : "");
   } catch (error) {
     if (seq !== state.loadSeq) return;
